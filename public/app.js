@@ -155,6 +155,13 @@
       if (!res.ok) throw new Error(T('Server xatoligi yuz berdi.'));
       return res;
     }
+    // /api so'roviga JSON o'rniga HTML kelsa — Node.js server ishlamayapti (faqat statik fayllar berilmoqda)
+    const isJson = (res.headers.get('content-type') || '').includes('application/json');
+    if (!isJson && (res.ok || [404, 405, 501].includes(res.status))) {
+      const e = new Error(T('Server (API) bilan aloqa yo‘q. Sayt Node.js serveri orqali ishga tushirilishi kerak: npm start'));
+      e.code = 'no_backend';
+      throw e;
+    }
     const data = await res.json().catch(() => ({}));
     if (res.status === 401 && state.token && !path.startsWith('/api/auth/login') && !path.startsWith('/api/auth/2fa')) {
       saveToken(null);
@@ -776,7 +783,7 @@
 
   async function loadSearchOverview() {
     const [health, citiesRes, popRes] = await Promise.all([api('/api/health'), api('/api/cities'), api('/api/medicines/popular')]);
-    const { pharmacies, medicines, inventory } = health.counts;
+    const { pharmacies = 0, medicines = 0, inventory = 0 } = health.counts || {};
     $('liveStatsBadge').innerHTML = `<i data-lucide="database" class="w-3.5 h-3.5"></i><span>${esc(T('{p} dorixona • {m} dori • {i} narx', { p: pharmacies, m: medicines, i: inventory }))}</span>`;
     state.cities = citiesRes.cities;
     const sel = $('citySelect');

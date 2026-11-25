@@ -2,6 +2,7 @@
 (function () {
   'use strict';
   const RU = {
+  "Server (API) bilan aloqa yo‘q. Sayt Node.js serveri orqali ishga tushirilishi kerak: npm start": "Нет связи с сервером (API). Сайт нужно запускать через Node.js-сервер: npm start",
   "so‘m": "сум",
   "m": "м",
   "km": "км",
