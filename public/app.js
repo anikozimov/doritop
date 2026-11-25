@@ -723,20 +723,23 @@
         <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">${esc(T('Kerakli dorini eng arzon va yaqin dorixonadan toping'))}</h1>
       </div>
       <div class="glass-strong rounded-3xl p-4 sm:p-5 mb-6 relative z-20">
-        <div class="flex flex-col md:flex-row gap-2.5">
-          <div class="relative flex-1">
+        <div class="flex flex-col gap-2.5">
+          <div class="flex gap-2">
+          <div class="relative flex-1 min-w-0">
             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400"><i data-lucide="search" class="w-5 h-5"></i></div>
-            <input type="search" id="searchInput" autocomplete="off" aria-label="${esc(T('Dori qidirish'))}" placeholder="${esc(T('Dori nomi yoki ta’sir etuvchi modda (lotin yoki kirill)...'))}" class="w-full pl-11 pr-4 py-3.5 text-base font-medium rounded-2xl glass-input"/>
+            <input type="search" id="searchInput" autocomplete="off" aria-label="${esc(T('Dori qidirish'))}" placeholder="${esc(T('Dori nomi yoki faol modda'))}" class="w-full pl-11 pr-4 py-3.5 text-base font-medium rounded-2xl glass-input"/>
             <div id="autocompleteList" class="hidden absolute left-0 right-0 top-full mt-2 glass-strong rounded-2xl overflow-hidden z-30 max-h-96 overflow-y-auto" role="listbox"></div>
           </div>
-          <div class="flex gap-2">
+          <button type="button" data-action="submit-search" class="btn btn-blue px-4 rounded-2xl shrink-0">${esc(T('Qidirish'))}</button>
+          </div>
+          <div class="flex flex-wrap gap-2">
             <select id="citySelect" aria-label="${esc(T('Shahar'))}" class="flex-1 md:w-44 px-3 py-3.5 rounded-2xl glass-input text-sm font-semibold text-slate-800"><option value="all">${esc(T('Barcha shaharlar'))}</option></select>
             <select id="rxSelect" aria-label="${esc(T('Retsept'))}" class="md:w-40 px-3 py-3.5 rounded-2xl glass-input text-sm font-semibold text-slate-800">
               <option value="all">${esc(T('Barcha dorilar'))}</option>
               <option value="otc" ${state.rx === 'otc' ? 'selected' : ''}>${esc(T('Retseptsiz'))}</option>
               <option value="rx" ${state.rx === 'rx' ? 'selected' : ''}>${esc(T('Retsept bilan'))}</option>
             </select>
-            <button type="button" data-action="find-nearby" title="${esc(T('Yaqinimdagi'))}" class="btn px-4 py-3.5 rounded-2xl btn-green shrink-0"><i data-lucide="navigation" class="w-4 h-4"></i><span class="hidden sm:inline">${esc(T('Yaqinimdagi'))}</span></button>
+            <button type="button" data-action="find-nearby" title="${esc(T('Yaqinimdagi'))}" class="btn px-4 py-3.5 rounded-2xl btn-green shrink-0"><i data-lucide="navigation" class="w-4 h-4"></i><span >${esc(T('Yaqinimdagi'))}</span></button>
           </div>
         </div>
         <div id="popularChipsWrap" class="hidden mt-3.5 flex flex-wrap items-center gap-2">
@@ -749,7 +752,17 @@
       <div id="resultSummaryBar" class="mb-3 text-sm text-slate-600"></div>
       <div id="listViewContainer" class="space-y-3.5"></div>
       <div id="mapViewContainer" class="hidden glass rounded-3xl overflow-hidden"><div id="pharmacyMap" class="w-full h-[500px] z-10"></div></div>
-      <div id="analogsSection" class="mt-7"></div>`;
+      <div id="analogsSection" class="mt-7"></div>
+      <section class="mt-7 glass rounded-3xl p-5 sm:p-6" aria-labelledby="howItWorksTitle">
+        <h2 id="howItWorksTitle" class="text-xl font-extrabold text-slate-900 mb-5">${esc(T('Qanday ishlaydi?'))}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          ${[
+            ['search', '1. Dorini qidiring', 'Dori nomi yoki faol moddani yozing va ro‘yxatdan kerakli dorini tanlang.'],
+            ['map-pin', '2. Narxlarni solishtiring', 'Shahar, narx va masofa bo‘yicha dorixonalarni taqqoslang.'],
+            ['phone', '3. Dorixona bilan bog‘laning', 'Borishdan oldin telefon orqali narx va mavjudlikni tasdiqlang.']
+          ].map(([icon, title, description]) => `<div><i data-lucide="${icon}" class="w-5 h-5 text-brand-green mb-3"></i><h3 class="font-bold text-slate-900 mb-2">${esc(T(title))}</h3><p class="text-sm text-slate-600">${esc(T(description))}</p></div>`).join('')}
+        </div>
+      </section>`;
     searchMap = null;
 
     const input = $('searchInput');
@@ -762,7 +775,7 @@
       const opts = [...list.querySelectorAll('[data-action="select-med"]')];
       const idx = opts.indexOf(document.activeElement);
       if (e.key === 'ArrowDown' && opts.length) { e.preventDefault(); opts[0].focus(); }
-      if (e.key === 'Enter') { e.preventDefault(); if (input.value.trim().length >= 2) loadAutocomplete(input.value, true); }
+      if (e.key === 'Enter') { e.preventDefault(); actions['submit-search'](); }
       if (e.key === 'Escape') list.classList.add('hidden');
       void idx;
     });
@@ -820,14 +833,17 @@
       : role === 'pharmacy_owner'
         ? `<button type="button" data-action="switch-page" data-page="pharmacy" class="btn btn-md btn-green">${esc(T('Dorixonamga dori qo‘shish'))}</button>`
         : role === 'user'
-          ? `<button type="button" data-action="switch-page" data-page="apply" class="btn btn-md btn-blue">${esc(T('Dorixona ochishga ariza berish'))}</button>`
-          : `<button type="button" data-action="show-auth" class="btn btn-md btn-blue">${esc(T('Dorixona egasi sifatida kirish'))}</button>`;
+          ? `<button type="button" data-action="switch-page" data-page="apply" class="btn btn-md btn-blue">${esc(T('Dorixonangizni qo‘shing'))}</button>`
+          : `<button type="button" data-action="switch-page" data-page="apply" class="btn btn-md btn-blue">${esc(T('Dorixonangizni qo‘shing'))}</button>`;
     $('listViewContainer').innerHTML = `
-      <div class="glass-strong rounded-3xl p-10 text-center">
+      <div class="glass-strong rounded-3xl p-6 sm:p-8 text-center">
         <div class="w-14 h-14 rounded-2xl bg-sky-50 text-brand-blue flex items-center justify-center mx-auto mb-3"><i data-lucide="database" class="w-7 h-7"></i></div>
         <h3 class="text-xl font-extrabold text-slate-900 mb-2">${esc(medCount ? T('Narxlar hali kiritilmagan') : T('Hozircha dorilar bazasi bo‘sh'))}</h3>
-        <p class="text-sm text-slate-600 max-w-md mx-auto mb-5">${esc(T('Dorixonalar narxlarni kiritgach, bu yerda qidiruv natijalari ko‘rinadi. Yuqoridagi qidiruv orqali katalogdagi dorini tanlashingiz mumkin.'))}</p>
-        ${cta}
+        <p class="text-sm text-slate-600 max-w-md mx-auto mb-5">${esc(T(medCount ? 'Katalogdan dori tanlang. Dorixonalar narxlarni qo‘shgach, takliflar shu yerda ko‘rinadi.' : 'Dorixonalar va dorilar hali qo‘shilmagan. Dorixona egasi bo‘lsangiz, ariza yuborishingiz mumkin.'))}</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/dori${T.lang === 'ru' ? '?lang=ru' : ''}" class="btn btn-md btn-soft">${esc(T('Dorilar katalogi'))}</a>
+          ${cta}
+        </div>
       </div>`;
     icons();
   }
@@ -854,7 +870,7 @@
         </button>`).join('')
         : `<div class="p-4 text-center text-sm text-slate-500">${esc(T('Mos dori topilmadi. Boshqacha yozib ko‘ring (masalan, ta’sir etuvchi modda nomi).'))}</div>`;
       list.classList.remove('hidden');
-    } catch (e) { /* jim */ }
+    } catch (e) { if (final && !silent) onError(e); }
   }
 
   function offersParams() {
@@ -1017,7 +1033,7 @@
               <h3 class="text-lg font-bold text-slate-900">${esc(o.pharmacy_name)}</h3>
               <div class="text-sm text-slate-600 mt-0.5">${esc(o.city)}, ${esc(o.address)}${o.distance_km !== null ? ` <span class="ml-1 font-semibold text-brand-blue">${esc(distance(o.distance_km))}</span>` : ''}</div>
               <div class="text-xs mt-1 ${stale ? 'text-amber-600 font-semibold' : 'text-slate-400'}">${esc(T('Narx yangilangan: {d}', { d: daysAgo(o.updated_days) }))}${stale ? ' — ' + esc(T('dorixonadan aniqlashtiring')) : ''}</div>
-              ${phones.length > 1 ? `<div class="text-xs text-slate-500 mt-0.5">${phones.map(esc).join(' • ')}</div>` : ''}
+              ${phones.length ? `<div class="text-xs text-slate-500 mt-0.5">${phones.map(esc).join(' • ')}</div>` : ''}
             </div>
           </div>
           <div class="flex flex-col items-stretch md:items-end gap-2.5 pt-3 md:pt-0 border-t md:border-t-0 border-slate-200/70">
@@ -1584,6 +1600,16 @@
       loadOffers();
     },
     'set-view': (b) => { state.viewMode = b.dataset.view; loadOffers(); },
+    'submit-search': () => {
+      const input = $('searchInput');
+      if (!input) return;
+      input.focus();
+      if (input.value.trim().length < 2) {
+        showToast(T('Qidirish uchun kamida 2 ta belgi kiriting.'), 'info');
+        return;
+      }
+      return loadAutocomplete(input.value.trim(), true);
+    },
     'find-nearby': () => {
       if (!navigator.geolocation) { showToast(T('Brauzeringiz joylashuvni aniqlay olmaydi.'), 'error'); return; }
       navigator.geolocation.getCurrentPosition(

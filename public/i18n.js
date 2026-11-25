@@ -2,6 +2,20 @@
 (function () {
   'use strict';
   const RU = {
+  "Dori nomi yoki faol modda": "Название или действующее вещество",
+  "Qidirish": "Найти",
+  "Qanday ishlaydi?": "Как это работает?",
+  "1. Dorini qidiring": "1. Найдите лекарство",
+  "Dori nomi yoki faol moddani yozing va ro‘yxatdan kerakli dorini tanlang.": "Введите название или действующее вещество и выберите лекарство из списка.",
+  "2. Narxlarni solishtiring": "2. Сравните цены",
+  "Shahar, narx va masofa bo‘yicha dorixonalarni taqqoslang.": "Сравните аптеки по городу, цене и расстоянию.",
+  "3. Dorixona bilan bog‘laning": "3. Свяжитесь с аптекой",
+  "Borishdan oldin telefon orqali narx va mavjudlikni tasdiqlang.": "Перед поездкой уточните цену и наличие по телефону.",
+  "Dorixonangizni qo‘shing": "Добавить свою аптеку",
+  "Katalogdan dori tanlang. Dorixonalar narxlarni qo‘shgach, takliflar shu yerda ko‘rinadi.": "Выберите лекарство в каталоге. Предложения появятся здесь, когда аптеки добавят цены.",
+  "Dorixonalar va dorilar hali qo‘shilmagan. Dorixona egasi bo‘lsangiz, ariza yuborishingiz mumkin.": "Аптеки и лекарства пока не добавлены. Если вы владелец аптеки, отправьте заявку.",
+  "Qidirish uchun kamida 2 ta belgi kiriting.": "Введите минимум 2 символа для поиска.",
+
   "Server (API) bilan aloqa yo‘q. Sayt Node.js serveri orqali ishga tushirilishi kerak: npm start": "Нет связи с сервером (API). Сайт нужно запускать через Node.js-сервер: npm start",
   "so‘m": "сум",
   "m": "м",
