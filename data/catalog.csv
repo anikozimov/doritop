@@ -1,0 +1,168 @@
+name,active_ingredient,manufacturer,dosage,category,prescription
+Paratsetamol,Paratsetamol,,500 mg tabletka,Og‘riq va isitma,0
+Paratsetamol,Paratsetamol,,200 mg tabletka,Og‘riq va isitma,0
+Paratsetamol sirop (bolalar),Paratsetamol,,120 mg/5 ml sirop,Og‘riq va isitma,0
+Paratsetamol shamcha (bolalar),Paratsetamol,,100 mg shamcha,Og‘riq va isitma,0
+Ibuprofen,Ibuprofen,,200 mg tabletka,Og‘riq va isitma,0
+Ibuprofen,Ibuprofen,,400 mg tabletka,Og‘riq va isitma,0
+Ibuprofen suspenziya (bolalar),Ibuprofen,,100 mg/5 ml suspenziya,Og‘riq va isitma,0
+Analgin,Metamizol natriy,,500 mg tabletka,Og‘riq va isitma,0
+Analgin,Metamizol natriy,,50% 2 ml ampula,Infuziya va in’ektsiya,1
+Aspirin,Atsetilsalitsil kislota,,500 mg tabletka,Og‘riq va isitma,0
+Aspirin kardio,Atsetilsalitsil kislota,,100 mg tabletka,Yurak-qon tomir,0
+Sitramon,Atsetilsalitsil kislota + paratsetamol + kofein,,tabletka,Og‘riq va isitma,0
+No-shpa,Drotaverin,,40 mg tabletka,Oshqozon-ichak,0
+Drotaverin,Drotaverin,,40 mg tabletka,Oshqozon-ichak,0
+Drotaverin,Drotaverin,,20 mg/ml 2 ml ampula,Infuziya va in’ektsiya,1
+Ketorolak,Ketorolak,,10 mg tabletka,Og‘riq va isitma,1
+Ketorolak,Ketorolak,,30 mg/ml 1 ml ampula,Infuziya va in’ektsiya,1
+Diklofenak,Diklofenak natriy,,50 mg tabletka,Bo‘g‘im va mushak,1
+Diklofenak,Diklofenak natriy,,75 mg/3 ml ampula,Infuziya va in’ektsiya,1
+Diklofenak gel,Diklofenak natriy,,1% gel,Bo‘g‘im va mushak,0
+Ketoprofen gel,Ketoprofen,,2.5% gel,Bo‘g‘im va mushak,0
+Nimesulid,Nimesulid,,100 mg tabletka,Og‘riq va isitma,1
+Meloksikam,Meloksikam,,15 mg tabletka,Bo‘g‘im va mushak,1
+Indometatsin,Indometatsin,,25 mg tabletka,Bo‘g‘im va mushak,1
+Troksirutin gel,Troksirutin,,2% gel,Yurak-qon tomir,0
+Geparin malhami,Natriy geparin,,malham 25 g,Yurak-qon tomir,0
+Amoksitsillin,Amoksitsillin,,500 mg kapsula,Antibiotik,1
+Amoksitsillin,Amoksitsillin,,250 mg/5 ml suspenziya uchun kukun,Antibiotik,1
+Amoksitsillin + klavulan kislota,Amoksitsillin + klavulan kislota,,875/125 mg tabletka,Antibiotik,1
+Amoksitsillin + klavulan kislota,Amoksitsillin + klavulan kislota,,500/125 mg tabletka,Antibiotik,1
+Azitromitsin,Azitromitsin,,500 mg tabletka,Antibiotik,1
+Azitromitsin,Azitromitsin,,250 mg kapsula,Antibiotik,1
+Azitromitsin suspenziya,Azitromitsin,,200 mg/5 ml suspenziya uchun kukun,Antibiotik,1
+Klaritromitsin,Klaritromitsin,,500 mg tabletka,Antibiotik,1
+Sefaleksin,Sefaleksin,,500 mg kapsula,Antibiotik,1
+Sefiksim,Sefiksim,,400 mg kapsula,Antibiotik,1
+Seftriakson,Seftriakson,,1 g in’ektsiya uchun kukun,Antibiotik,1
+Sefazolin,Sefazolin,,1 g in’ektsiya uchun kukun,Antibiotik,1
+Siprofloksatsin,Siprofloksatsin,,500 mg tabletka,Antibiotik,1
+Levofloksatsin,Levofloksatsin,,500 mg tabletka,Antibiotik,1
+Doksitsiklin,Doksitsiklin,,100 mg kapsula,Antibiotik,1
+Metronidazol,Metronidazol,,250 mg tabletka,Antibiotik,1
+Nifuroksazid,Nifuroksazid,,200 mg kapsula,Oshqozon-ichak,0
+Furazolidon,Furazolidon,,50 mg tabletka,Oshqozon-ichak,0
+Flukonazol,Flukonazol,,150 mg kapsula,Zamburug‘ga qarshi,1
+Klotrimazol krem,Klotrimazol,,1% krem,Zamburug‘ga qarshi,0
+Ketokonazol shampun,Ketokonazol,,2% shampun,Zamburug‘ga qarshi,0
+Nistatin,Nistatin,,500 000 TB tabletka,Zamburug‘ga qarshi,1
+Asiklovir,Asiklovir,,200 mg tabletka,Virusga qarshi,1
+Asiklovir krem,Asiklovir,,5% krem,Virusga qarshi,0
+Oseltamivir,Oseltamivir,,75 mg kapsula,Virusga qarshi,1
+Loratadin,Loratadin,,10 mg tabletka,Allergiyaga qarshi,0
+Loratadin sirop,Loratadin,,5 mg/5 ml sirop,Allergiyaga qarshi,0
+Setirizin,Setirizin,,10 mg tabletka,Allergiyaga qarshi,0
+Desloratadin,Desloratadin,,5 mg tabletka,Allergiyaga qarshi,0
+Suprastin,Xloropiramin,,25 mg tabletka,Allergiyaga qarshi,0
+Difengidramin,Difengidramin,,50 mg tabletka,Allergiyaga qarshi,0
+Ketotifen,Ketotifen,,1 mg tabletka,Allergiyaga qarshi,1
+Omeprazol,Omeprazol,,20 mg kapsula,Oshqozon-ichak,0
+Pantoprazol,Pantoprazol,,40 mg tabletka,Oshqozon-ichak,1
+Famotidin,Famotidin,,20 mg tabletka,Oshqozon-ichak,0
+Domperidon,Domperidon,,10 mg tabletka,Oshqozon-ichak,0
+Metoklopramid,Metoklopramid,,10 mg tabletka,Oshqozon-ichak,1
+Ondansetron,Ondansetron,,8 mg tabletka,Oshqozon-ichak,1
+Loperamid,Loperamid,,2 mg kapsula,Oshqozon-ichak,0
+Diosmektit,Diosmektit,,3 g poroshok,Oshqozon-ichak,0
+Aktivlangan ko‘mir,Aktivlangan ko‘mir,,250 mg tabletka,Oshqozon-ichak,0
+Pankreatin,Pankreatin,,25 000 TB kapsula,Oshqozon-ichak,0
+Simetikon,Simetikon,,40 mg kapsula,Oshqozon-ichak,0
+Laktuloza,Laktuloza,,667 mg/ml sirop,Oshqozon-ichak,0
+Bisakodil,Bisakodil,,5 mg tabletka,Oshqozon-ichak,0
+Gliserin shamchalari,Gliserin,,shamcha,Oshqozon-ichak,0
+Regidratsiya tuzlari,Natriy xlorid + kaliy xlorid + natriy sitrat + glyukoza,,poroshok paket,Oshqozon-ichak,0
+Ursodezoksixol kislota,Ursodezoksixol kislota,,250 mg kapsula,Oshqozon-ichak,1
+Enalapril,Enalapril,,10 mg tabletka,Yurak-qon tomir,1
+Lizinopril,Lizinopril,,10 mg tabletka,Yurak-qon tomir,1
+Kaptopril,Kaptopril,,25 mg tabletka,Yurak-qon tomir,1
+Amlodipin,Amlodipin,,5 mg tabletka,Yurak-qon tomir,1
+Amlodipin,Amlodipin,,10 mg tabletka,Yurak-qon tomir,1
+Losartan,Losartan,,50 mg tabletka,Yurak-qon tomir,1
+Valsartan,Valsartan,,80 mg tabletka,Yurak-qon tomir,1
+Bisoprolol,Bisoprolol,,5 mg tabletka,Yurak-qon tomir,1
+Metoprolol,Metoprolol,,50 mg tabletka,Yurak-qon tomir,1
+Karvedilol,Karvedilol,,25 mg tabletka,Yurak-qon tomir,1
+Gidroxlorotiazid,Gidroxlorotiazid,,25 mg tabletka,Yurak-qon tomir,1
+Indapamid,Indapamid,,2.5 mg tabletka,Yurak-qon tomir,1
+Furosemid,Furosemid,,40 mg tabletka,Yurak-qon tomir,1
+Spironolakton,Spironolakton,,25 mg tabletka,Yurak-qon tomir,1
+Atorvastatin,Atorvastatin,,20 mg tabletka,Yurak-qon tomir,1
+Rozuvastatin,Rozuvastatin,,10 mg tabletka,Yurak-qon tomir,1
+Klopidogrel,Klopidogrel,,75 mg tabletka,Yurak-qon tomir,1
+Varfarin,Varfarin,,2.5 mg tabletka,Yurak-qon tomir,1
+Nitroglitserin,Nitroglitserin,,0.5 mg tabletka (til ostiga),Yurak-qon tomir,0
+Validol,Mentol (izovalerian kislota mentil efiri),,60 mg tabletka,Yurak-qon tomir,0
+Korvalol,Fenobarbital + etilbromizovalerianat,,tomchi 25 ml,Yurak-qon tomir,0
+Meldoniy,Meldoniy,,250 mg kapsula,Yurak-qon tomir,1
+Metformin,Metformin,,500 mg tabletka,Qandli diabet,1
+Metformin,Metformin,,850 mg tabletka,Qandli diabet,1
+Metformin,Metformin,,1000 mg tabletka,Qandli diabet,1
+Gliklazid,Gliklazid,,60 mg tabletka (modifikatsiyalangan),Qandli diabet,1
+Glibenklamid,Glibenklamid,,5 mg tabletka,Qandli diabet,1
+Levotiroksin,Levotiroksin natriy,,50 mkg tabletka,Gormonlar,1
+Levotiroksin,Levotiroksin natriy,,100 mkg tabletka,Gormonlar,1
+Prednizolon,Prednizolon,,5 mg tabletka,Gormonlar,1
+Deksametazon,Deksametazon,,4 mg/ml 1 ml ampula,Infuziya va in’ektsiya,1
+Gidrokortizon malhami,Gidrokortizon,,1% malham,Teri,0
+Betametazon krem,Betametazon,,0.05% krem,Teri,1
+Salbutamol ingalyator,Salbutamol,,100 mkg/doza aerozol,Nafas yo‘llari,1
+Budesonid ingalyator,Budesonid,,200 mkg/doza aerozol,Nafas yo‘llari,1
+Montelukast,Montelukast,,10 mg tabletka,Nafas yo‘llari,1
+Ambroksol,Ambroksol,,30 mg tabletka,Nafas yo‘llari,0
+Ambroksol sirop,Ambroksol,,15 mg/5 ml sirop,Nafas yo‘llari,0
+Bromgeksin,Bromgeksin,,8 mg tabletka,Nafas yo‘llari,0
+Atsetiltsistein,Atsetiltsistein,,600 mg shipuchi tabletka,Nafas yo‘llari,0
+Mukaltin,Gulxayri ildizi ekstrakti,,50 mg tabletka,Nafas yo‘llari,0
+Ksilometazolin,Ksilometazolin,,0.1% burun spreyi,Burun va tomoq,0
+Ksilometazolin (bolalar),Ksilometazolin,,0.05% burun tomchisi,Burun va tomoq,0
+Oksimetazolin,Oksimetazolin,,0.05% burun spreyi,Burun va tomoq,0
+Nafazolin,Nafazolin,,0.1% burun tomchisi,Burun va tomoq,0
+Dengiz suvi spreyi,Dengiz suvi (izotonik),,burun spreyi,Burun va tomoq,0
+Xlorgeksidin,Xlorgeksidin biglyukonat,,0.05% eritma 100 ml,Antiseptik,0
+Vodorod peroksid,Vodorod peroksid,,3% eritma 100 ml,Antiseptik,0
+Yod eritmasi,Yod,,5% spirtli eritma 10 ml,Antiseptik,0
+Brilliant yashil,Brilliant yashil,,1% spirtli eritma 10 ml,Antiseptik,0
+Tibbiy spirt,Etil spirti,,70% 100 ml,Antiseptik,0
+Furatsilin,Nitrofural,,20 mg tabletka (eritma uchun),Antiseptik,0
+Dekspantenol krem,Dekspantenol,,5% krem,Teri,0
+Dekspantenol sprey,Dekspantenol,,aerozol,Teri,0
+Levomekol malhami,Xloramfenikol + metiluratsil,,malham 40 g,Teri,0
+Vishnevskiy malhami,Kseroform + qayin qatroni + kanakunjut moyi,,malham,Teri,0
+Sink malhami,Sink oksid,,10% malham,Teri,0
+Permetrin,Permetrin,,krem / eritma,Teri,0
+Tetratsiklin ko‘z malhami,Tetratsiklin,,1% ko‘z malhami,Ko‘z,1
+Levomitsetin ko‘z tomchisi,Xloramfenikol,,0.25% ko‘z tomchisi,Ko‘z,1
+Sulfatsil natriy,Sulfatsetamid,,20% ko‘z tomchisi,Ko‘z,0
+Tobramitsin ko‘z tomchisi,Tobramitsin,,0.3% ko‘z tomchisi,Ko‘z,1
+Tetrizolin ko‘z tomchisi,Tetrizolin,,0.05% ko‘z tomchisi,Ko‘z,0
+Sun’iy ko‘z yoshi,Gipromelloza,,ko‘z tomchisi,Ko‘z,0
+Askorbin kislota,Askorbin kislota,,500 mg tabletka,Vitamin va minerallar,0
+Vitamin D3,Kolekalsiferol,,500 TB/tomchi eritma,Vitamin va minerallar,0
+Vitamin D3,Kolekalsiferol,,2000 TB tabletka,Vitamin va minerallar,0
+Kalsiy D3,Kalsiy karbonat + kolekalsiferol,,chaynaladigan tabletka,Vitamin va minerallar,0
+Magniy B6,Magniy laktat + piridoksin,,tabletka,Vitamin va minerallar,0
+Foliy kislota,Foliy kislota,,1 mg tabletka,Vitamin va minerallar,0
+Temir sulfat + askorbin kislota,Temir (II) sulfat + askorbin kislota,,tabletka,Vitamin va minerallar,0
+Siankobalamin (B12),Siankobalamin,,500 mkg/ml ampula,Vitamin va minerallar,1
+Omega-3,Omega-3 yog‘ kislotalari,,1000 mg kapsula,Vitamin va minerallar,0
+Sink,Sink,,tabletka,Vitamin va minerallar,0
+Multivitaminlar,Multivitaminlar,,tabletka,Vitamin va minerallar,0
+Pirasetam,Pirasetam,,400 mg kapsula,Asab tizimi,1
+Glitsin,Glitsin,,100 mg tabletka (til ostiga),Asab tizimi,0
+Valeriana,Valeriana ildizi ekstrakti,,20 mg tabletka,Asab tizimi,0
+Karbamazepin,Karbamazepin,,200 mg tabletka,Asab tizimi,1
+Amitriptilin,Amitriptilin,,25 mg tabletka,Asab tizimi,1
+Sumatriptan,Sumatriptan,,50 mg tabletka,Asab tizimi,1
+Albendazol,Albendazol,,400 mg tabletka,Gijjaga qarshi,0
+Mebendazol,Mebendazol,,100 mg tabletka,Gijjaga qarshi,0
+Pirantel,Pirantel,,250 mg tabletka,Gijjaga qarshi,0
+Natriy xlorid,Natriy xlorid,,0.9% eritma 200 ml,Infuziya va in’ektsiya,1
+Natriy xlorid,Natriy xlorid,,0.9% eritma 5 ml ampula,Infuziya va in’ektsiya,0
+Glyukoza,Glyukoza (dekstroza),,5% eritma 200 ml,Infuziya va in’ektsiya,1
+Ringer eritmasi,Natriy xlorid + kaliy xlorid + kalsiy xlorid,,eritma 200 ml,Infuziya va in’ektsiya,1
+Lidokain,Lidokain,,2% 2 ml ampula,Infuziya va in’ektsiya,1
+In’ektsiya uchun suv,Suv,,5 ml ampula,Infuziya va in’ektsiya,0
+Allopurinol,Allopurinol,,100 mg tabletka,Bo‘g‘im va mushak,1
+Tamsulozin,Tamsulozin,,0.4 mg kapsula,Siydik yo‘llari,1
+Fitolizin pastasi,O‘simlik ekstraktlari,,pasta 100 g,Siydik yo‘llari,0

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DORI TOP — Dorilarni qidirish va narxlarni taqqoslash</title>
+  <meta name="description" content="O‘zbekiston bo‘ylab dorilarni qidiring, dorixonalardagi narxlarni taqqoslang, bron qiling va eng yaqin dorixonani toping." />
+  <meta name="theme-color" content="#059669" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden antialiased app-bg">
+  <noscript><div class="p-4 text-center text-sm">DORI TOP ishlashi uchun JavaScript yoqilgan bo‘lishi kerak. <a class="underline" href="/dori">Dorilar katalogi</a></div></noscript>
+
+  <!-- Kirish / ro'yxatdan o'tish oynasi -->
+  <section id="authGate" class="hidden flex-1 flex items-center justify-center p-4 sm:p-6">
+    <div id="authCard" class="w-full max-w-md glass-strong rounded-3xl p-7 sm:p-9 animate-fade-up"></div>
+  </section>
+
+  <!-- Asosiy ilova -->
+  <div id="appShell" class="hidden flex-1 flex flex-col">
+    <header class="sticky top-0 z-40 glass border-b border-white/80">
+      <div class="max-w-6xl mx-auto px-3 sm:px-6 h-16 flex items-center justify-between gap-2">
+        <button type="button" data-action="switch-page" data-page="search" class="flex items-center gap-2.5 text-left shrink-0">
+          <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-green to-brand-blue text-white flex items-center justify-center shadow-sm">
+            <i data-lucide="pill" class="w-5 h-5"></i>
+          </span>
+          <span class="hidden sm:block">
+            <span class="block text-lg font-extrabold tracking-tight text-slate-900 leading-none">DORI <span class="text-brand-green">TOP</span></span>
+            <span id="userRoleLabel" class="block text-[11px] font-semibold text-brand-blue mt-0.5"></span>
+          </span>
+        </button>
+        <nav id="mainNav" class="flex items-center gap-1 overflow-x-auto"></nav>
+      </div>
+    </header>
+
+    <main id="page" class="flex-1 w-full mx-auto px-3 sm:px-6 py-6"></main>
+
+    <footer class="border-t border-slate-200/70 py-5 text-xs text-slate-500">
+      <div id="footer" class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row gap-3 justify-between"></div>
+    </footer>
+  </div>
+
+  <!-- Modal oyna -->
+  <div id="modal" class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-slate-900/40 backdrop-blur-sm" role="dialog" aria-modal="true">
+    <div id="modalCard" class="glass-strong w-full sm:max-w-lg max-h-[92vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl p-6 animate-fade-up"></div>
+  </div>
+
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-[60] flex flex-col gap-2 max-w-sm w-[calc(100%-2.5rem)] pointer-events-none" aria-live="polite"></div>
+
+  <script src="/vendor/lucide.min.js"></script>
+  <script src="/vendor/leaflet/leaflet.js"></script>
+  <script src="/i18n.js"></script>
+  <script src="/app.js"></script>
+  <script src="/cabinet.js"></script>
+  <script src="/admin.js"></script>
+</body>
+</html>
